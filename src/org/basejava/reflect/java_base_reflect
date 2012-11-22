@@ -1,0 +1,20 @@
+#####
+java reflect
+JAVA反射机制主要提供了以下功能：
+      1.在运行时判断任意一个对象所属的类
+      2.在运行时构造任意一个类的对象
+      3.在运行时判断任意一个类所具有的成员变量和方法（通过反射甚至可以调用private方法）
+      4.在运行时调用任意一个对象的方法（*****注意：前提都是在运行时，而不是在编译时
+ 
+Java 反射相关的API简介：
+      位于java。lang。reflect包中
+        --Class类：代表一个类
+        --Filed类：代表类的成员变量
+        --Method类：代表类的方法
+        --Constructor类：代表类的构造方法
+        --Array类：提供了动态创建数组，以及访问数组的元素的静态方法。该类中的所有方法都是静态方法      
+        
+#############################http://www.cnblogs.com/rollenholt/archive/2011/09/02/2163758.html
+Class c = Class.forName("org.basejava.reflect.ReflectBase");
+Method mt = c.getMethod("testadd", new Class[]{int.class,int.class});
+mt.invoke(c.newInstance(),10,12);        
