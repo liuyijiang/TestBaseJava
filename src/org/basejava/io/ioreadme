@@ -1,0 +1,13 @@
+阻塞型 IO（blocking I/O）  同步IO
+非阻塞性IO（nonblocking I/O） 同步IO
+IO多路复用（I/O multiplexing）同步IO
+信号驱动IO（signal driven I/O）同步IO
+异步IO（asynchronous I/O）异步IO
+
+
+###########同步，异步的区别###########
+ 1同步IO，需要用户进程主动将存放在内核缓冲区中的数据拷贝到用户进程中。
+ 2异步IO，内核会自动将数据从内核缓冲区拷贝到用户缓冲区，然后再通知用户。
+ 
+ 
+ 阻塞，非阻塞，是针对单个进程而言的。

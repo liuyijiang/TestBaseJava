@@ -1,0 +1,38 @@
+##############################
+#   nio  study
+##############################
+1ExecutorService java并发库 用来创建线程池
+    ExecutorService executorService = Executors.newFixedThreadPool(int nThreads);//创建固定大小(nThreads,大小不能超过int的最大值)的线程池
+    ExecutorService executorService = Executors. newFixedThreadPool(nThreads,threadFactory);//说明：创建固定大小(nThreads,大小不能超过int的最大值)的线程池，
+               缓冲任务的队列为LinkedBlockingQueue,大小为整型的最大数，当使用此线程池时，在同执行的任务数量超过传入的线程池大小值后，
+               将会放入LinkedBlockingQueue，在LinkedBlockingQueue中的任务需要等待线程空闲后再执行，如果放入LinkedBlockingQueue中的任务超过整型的最大数时，抛出RejectedExecutionException。
+
+#######  关于线程的一些
+# 新类   Callable  Future FutureTask http://blog.csdn.net/ghsau/article/details/7451464           
+
+#######  java.nio
+ServerSocketChannel 代替ServerSocket 支持阻塞和非阻塞
+SocketChannel 代替Socket 支持阻塞和非阻塞
+Selector 为ServerSocketChannel 监控接受就绪事件，为SocketChannel监控接受就绪事件，读写就绪
+SelectionKey 代表ServerSocketChannel和SocketChannel 向Selector注册事件的句柄，
+当SelectionKey对象位于Selector对象的selected-key集合中时，就表示与这个SelectedKey对象相关的事件发生了
+
+
+
+################# buffer 缓冲区
+作用{
+         减少实际物理读写次数
+         创建的时候已分配内存，内存一直被重用，减少动态分配和回收的次数
+    }
+key capacity(容量)：表示该缓存区可以保存多少数据
+    limit(极限)：表示缓存区的当前终点，不能对缓冲区中超过极限的区域进行读写操作，极限可修改
+    position(位置)：表示缓冲区中下一个读写单元的位置，每次读写缓冲区的数据，都会改变
+    
+  #改变以上操作的方法 
+   clear()：把极限设为容量，再把位置设为0；
+   flip()：把极限设为位置，位置设为0；
+   rewind(): 不改变极限，把位置设为0；
+
+
+ByteBuffer
+
