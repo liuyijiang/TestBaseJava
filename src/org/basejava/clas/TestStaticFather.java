@@ -9,4 +9,10 @@ public class TestStaticFather {
 		System.out.println("Father");
 	}
 	
+	protected int method1(int a, int b) { 
+		return 0; 
+    }
+	
+	
+	
 }
