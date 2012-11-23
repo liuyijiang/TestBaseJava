@@ -7,13 +7,13 @@ import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
 
-import org.junit.Ignore;
-import org.junit.Test;
+//import org.junit.Ignore;
+//import org.junit.Test;
 
 public class TestMap {
    
-	@Test
-	@Ignore
+//	@Test
+//	@Ignore
 	public void testMap(){
 		SortedMap<Integer,String> sm = new TreeMap<Integer, String>();//treemap 是有序的
 	       // Map<Integer,String> mp = new TreeMap<Integer, String>();
@@ -37,7 +37,7 @@ public class TestMap {
 	}
 	
 	//测试遍历map
-	@Test 
+//	@Test 
 	public void testIterMap(){
 		//SortedMap<Integer,String> sm = new TreeMap<Integer, String>();//treemap 是有序的
 	     Map<Integer,String> sm = new HashMap<Integer, String>();
