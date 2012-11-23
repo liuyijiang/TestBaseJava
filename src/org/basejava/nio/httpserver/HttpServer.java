@@ -84,7 +84,7 @@ public class HttpServer {
 		SocketChannel sc = (SocketChannel)key.channel();
 		ByteBuffer readBuff = ByteBuffer.allocate(32);//生成新的一个buffer
 		sc.read(readBuff);//读
-		readBuff.flip();
+		readBuff.flip();//
 		
 		bf.limit(bf.capacity());//为啥要把极限设为容量
 		bf.put(readBuff);
