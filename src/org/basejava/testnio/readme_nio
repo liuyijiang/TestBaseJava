@@ -14,3 +14,16 @@ key word
 5面向文件的i/o和流i/o
 6多工i/o
 
+###################################################
+  Buffer&Chanel
+
+Channel 和 buffer 是 NIO 是两个最基本的数据类型抽象。
+
+Buffer:
+是一块连续的内存块。
+是 NIO 数据读或写的中转地。
+
+Channel:
+数据的源头或者数据的目的地
+用于向 buffer 提供数据或者读取 buffer 数据 ,buffer 对象的唯一接口。
+异步 I/O 支持 

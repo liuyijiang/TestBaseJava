@@ -4,10 +4,12 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.nio.ByteBuffer;
+import java.nio.CharBuffer;
 import java.nio.channels.FileChannel;
+import java.nio.charset.Charset;
 
 public class TestNIO {
-    
+	private Charset charset = Charset.forName("GBK");// 创建GBK字符集 
 	public static final String url = System.getProperty("user.dir") + File.separator + "data" + File.separator;
 	
 	/**
@@ -24,6 +26,17 @@ public class TestNIO {
 		fos.flush();
 		fos.close();
 		System.out.println("ok");
+	}
+	
+	public void testecdencode(){
+		CharBuffer cb = CharBuffer.allocate(100);
+		//ByteBuffer bb = ByteBuffer.allocate(100);
+		//cb.enc
+		//cb.flip();
+		cb.put("dsadadsada2");
+		cb.put("1111111");
+		cb.flip();
+		System.out.println(cb.toString());
 	}
 	
 	
@@ -59,7 +72,7 @@ public class TestNIO {
 	public static void main(String[] args) throws Exception{
 		// TODO Auto-generated method stub
 		TestNIO t = new TestNIO();
-		t.baseNIOCopy("data.txt");
+		t.testecdencode();
 	}
 
 }

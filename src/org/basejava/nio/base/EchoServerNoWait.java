@@ -102,10 +102,8 @@ public class EchoServerNoWait {
 		ByteBuffer temp = encode(outputDatea);
 		buffer.position(temp.limit());
 		buffer.compact();
-//		key.cancel();
-//		sc.close();
-//		System.out.println("colse clinit");
-		System.out.println("**********"+outputDatea);
+		//buffer.clear();
+		//System.out.println("**********"+outputDatea);
 		if("".equals(outputDatea.trim())){
 			key.cancel();
 			sc.close();
@@ -119,9 +117,8 @@ public class EchoServerNoWait {
 		ByteBuffer readBuff = ByteBuffer.allocate(32);
 		sc.read(readBuff);
 		readBuff.flip();
-		System.out.println("1:"+buffer.limit());
 		buffer.limit(buffer.capacity());
-		System.out.println("2:"+buffer.limit());
+		//buffer.limit();
 		buffer.put(readBuff);
 	}
 	
@@ -135,7 +132,7 @@ public class EchoServerNoWait {
 	public static void main(String[] args)throws Exception {
 		// TODO Auto-generated method stub
 		EchoServerNoWait e = new EchoServerNoWait();
-		e.service();
+		e.service(); 
 	}
 
 }

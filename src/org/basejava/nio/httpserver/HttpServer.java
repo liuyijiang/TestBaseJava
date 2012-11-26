@@ -110,6 +110,9 @@ public class HttpServer {
 		bf.flip();
 		String url = decode(bf);
 		System.out.println(url);
+		bf.clear();
+		sc.close();
+		//bf.clear();
 	}
 	
 	
