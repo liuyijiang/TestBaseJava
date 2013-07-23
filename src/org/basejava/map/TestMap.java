@@ -57,13 +57,16 @@ public class TestMap {
 	}
 	
 	
+	//public void LinkedHashMap//
 	
 	
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		String str = "p22@xt.com";
+		String host = str.substring(str.indexOf("@")+1,str.lastIndexOf("."));
+		System.out.println(host);
 
 	}
 
