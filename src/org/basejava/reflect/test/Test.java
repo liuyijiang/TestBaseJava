@@ -6,12 +6,13 @@ public class Test {
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		try {
-			Class claze = Class.forName(DemoBean.class.getName());
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-		
+//		try {
+//			Class claze = Class.forName(DemoBean.class.getName());
+//		} catch (ClassNotFoundException e) {
+//			e.printStackTrace();
+//		}
+//		
+		System.out.println(Character.UnicodeBlock.YIJING_HEXAGRAM_SYMBOLS);
 
 	}
 
